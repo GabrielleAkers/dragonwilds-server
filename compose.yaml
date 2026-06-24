@@ -1,0 +1,21 @@
+services:
+    rsserver:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                UID: 1002
+                GUID: 1002
+        ports:
+            - 7777:7777
+        volumes:
+            - ./data:/home/dragonwilds/data
+        restart: unless-stopped
+        deploy:
+            restart_policy:
+                condition: "on-failure"
+                delay: 15s
+                max_attempts: 3
+                window: 120s
+        tty: true
+        stdin_open: true

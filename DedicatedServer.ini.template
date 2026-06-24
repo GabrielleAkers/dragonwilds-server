@@ -1,0 +1,8 @@
+;METADATA=(Diff=true, UseCommands=true)
+[/Script/Dominion.DedicatedServerSettings]
+AdminPassword=
+OwnerId=
+ServerName=
+WorldPassword=
+DefaultWorldName=
+

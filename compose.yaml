@@ -7,7 +7,7 @@ services:
                 UID: 1002
                 GUID: 1002
         ports:
-            - 7777:7777
+            - 7777:7777/udp
         volumes:
             - ./data:/home/dragonwilds/data
         restart: unless-stopped
